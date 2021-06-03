@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { StyleSheet } from "react-native";
-import { Image, Platform } from "react-native";
+import { Image, Platform, StatusBar } from "react-native";
 
 import { Heading } from "./Heading";
 import { Input } from "./Input";
