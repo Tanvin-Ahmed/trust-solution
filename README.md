@@ -1,4 +1,4 @@
-# trust-solution [@(Live)](https://expo.io/@tanvin_ahmed_touhid/trust-solution)
+# trust-solution (React Native App) [(Live)](https://expo.io/@tanvin_ahmed_touhid/trust-solution)
 This is a Service relaed App. User can Login into the app. In the home page user can choose any type of service which he want. At last, user can see that in service details page.
 
 # Features
