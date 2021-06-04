@@ -11,21 +11,23 @@ export const loginContext = createContext();
 const Drawer = createDrawerNavigator();
 
 export default function App() {
-    const [loginInfo, setLoginInfo] = useState();
-    console.log(loginInfo);
-    return (
-        <loginContext.Provider value={{ setLoginInfo }}>
-            <NavigationContainer>
-                <Drawer.Navigator>
-                    <Drawer.Screen name={loginInfo ? "logOut" : "LogIn"} component={LoginScreen} />
-                    {loginInfo && (
-                        <>
-                            <Drawer.Screen name="Home" component={Home} />
-                            <Drawer.Screen name="Details" component={Details} />
-                        </>
-                    )}
-                </Drawer.Navigator>
-            </NavigationContainer>
-        </loginContext.Provider>
-    );
+  const [loginInfo, setLoginInfo] = useState();
+  return (
+    <loginContext.Provider value={{ setLoginInfo }}>
+      <NavigationContainer>
+        <Drawer.Navigator>
+          <Drawer.Screen
+            name={loginInfo ? "logOut" : "LogIn"}
+            component={LoginScreen}
+          />
+          {loginInfo && (
+            <>
+              <Drawer.Screen name="Home" component={Home} />
+              <Drawer.Screen name="Details" component={Details} />
+            </>
+          )}
+        </Drawer.Navigator>
+      </NavigationContainer>
+    </loginContext.Provider>
+  );
 }
