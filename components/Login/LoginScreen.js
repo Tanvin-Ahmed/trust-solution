@@ -1,12 +1,16 @@
 import React, { useContext } from "react";
-import { StyleSheet } from "react-native";
-import { Image, Platform, StatusBar } from "react-native";
-
+import {
+  Image,
+  Platform,
+  ScrollView,
+  StatusBar,
+  StyleSheet,
+} from "react-native";
+import { loginContext } from "../../App";
+import { AuthContainer } from "./AuthContainer";
+import { FilledButton } from "./FilledButton";
 import { Heading } from "./Heading";
 import { Input } from "./Input";
-import { FilledButton } from "./FilledButton";
-import { AuthContainer } from "./AuthContainer";
-import { loginContext } from "../../App";
 
 export function LoginScreen({ navigation }) {
   const { setLoginInfo } = useContext(loginContext);
@@ -78,6 +82,6 @@ const styles = StyleSheet.create({
   },
   loginImg: {
     width: "100%",
-    height: "300px",
+    height: 300,
   },
 });

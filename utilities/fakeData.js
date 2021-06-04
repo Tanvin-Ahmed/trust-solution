@@ -6,13 +6,11 @@ const fakeData = [
     service_charge: "7085",
     author:'Risfold',
     ratings: 4,
-    duration: 4,
-    enrolled: 4521,
+    customers: 4521,
     features: [
       'UI/UX Design',
-      'HTML',
-      'CSS',
-      'Bootstrap'
+      'Template Design',
+      'Frontend Design'
     ]
   },
   {
@@ -22,14 +20,11 @@ const fakeData = [
     service_charge: "10000",
     author:'Veronica Z. Johnson',
     ratings: 5,
-    duration: 5,
-    enrolled: 2451,
+    customers: 2451,
     features: [
-      'HTML',
-      'CSS',
-      'Bootstrap',
-      'JavaScript(ES6)',
-      'React'
+      'Frontend Development',
+      'Backend Development',
+      'E-commerce Web Development'
     ]
   },
   {
@@ -39,13 +34,11 @@ const fakeData = [
     service_charge: "14113",
     author:'Philomena D. Shackleford',
     ratings: 5,
-    duration: 8,
-    enrolled: 4152,
+    customers: 4152,
     features: [
-      'Java',
-      'Object-Oriented Java',
-      'android studio',
-      'Native'
+      'Android App Development',
+      'IOS APP Development',
+      'Cross-Platform Mobile App Development'
     ]
   },
   {
@@ -55,13 +48,11 @@ const fakeData = [
     service_charge: "15045",
     author:'Joel M. Wills',
     ratings: 4,
-    duration: 12,
-    enrolled: 412,
+    customers: 412,
     features: [
-      'C++',
-      'Object-Oriented C++',
-      'Desktop App Development',
-      'Desktop Control App',
+      'Desktop Software Modernization',
+      'Desktop API Development',
+      'Desktop Software Integration'
     ]
   },
   {
@@ -71,13 +62,11 @@ const fakeData = [
     service_charge: "1160",
     author:'Michael J. Horton',
     ratings: 5,
-    duration: 9,
-    enrolled: 541,
+    customers: 541,
     features: [
-      'Cloud Storage Setup',
-      'Basic Cloud Storage',
-      'Cloud Storage Management',
-      'Data Management and Storage',
+      'Unlimited Cloud Storage',
+      'High durability',
+      'Low latency'
     ]
   },
   {
@@ -87,13 +76,11 @@ const fakeData = [
     service_charge: "20000",
     author:'Robert L. Chou',
     ratings: 4,
-    duration: 8,
-    enrolled: 3561,
+    customers: 3561,
     features: [
-      'Basic knowledge of Cyber Security',
-      'Basic Python',
-      'Advance Python',
-      'Cyber Security wit Python',
+      'Network Security Monitoring',
+      'Cyber Security Consulting',
+      'Penetration Testing',
     ]
   },
 ];

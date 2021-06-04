@@ -4,11 +4,12 @@ import { Image, Platform, ScrollView, StatusBar, StyleSheet, Text, View } from "
 import Button from "../CoreComponent/Button";
 
 const Details = ({ route }) => {
-  const { img, name, cardPrice, service_charge, author, features, duration, enrolled, ratings } = route.params;
-
+  const { img, name, service_charge, author, features, customers, ratings } = route.params&&route.params || {};
   const ratingArr = [1, 2, 3, 4, 5];
 
   return (
+    <>
+    {route.params?
     <ScrollView style={styles.container}>
       <View style={styles}>
         <Image
@@ -33,16 +34,20 @@ const Details = ({ route }) => {
         </View>
         <Text style={styles.about}>About</Text>
         <Text style={styles.para}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione ut maiores laudantium, consequatur molestias alias, reiciendis recusandae, dignissimos atque officia similique temporibus sit dicta eius aut voluptas placeat? Nulla deleniti temporibus ipsa accusantium accusamus harum architecto aliquid, pariatur officia atque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, sapiente? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis, pariatur!</Text>
-        <Text style={styles.data}>Duration: {duration} Month</Text>
-        <Text style={styles.data}>Already Enrolled: {enrolled}</Text>
+        <Text style={styles.data}>customers: {customers}</Text>
         <View style={styles.ratings}>
           {
-            ratingArr.map(rating => <MaterialIcons key={rating} name="star" size={24} color={rating<=ratings?'blue':'black'} />)
+            ratingArr.map(rating => <MaterialIcons key={rating} name="star" size={24} color={rating<=ratings?'goldenrod':'black'} />)
           }
         </View>
-        <Button text='Enroll Now' style={styles.button}  />
+        <Button text='Buy The Service' style={styles.button}  />
       </View>
     </ScrollView>
+    :<View style={styles.errorContainer}>
+      <Text style={styles.error}>Your Need To Select A Service</Text>
+    </View>
+    }
+    </>
   );
 };
 
@@ -111,6 +116,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 10,
     marginLeft: 5,
+  },
+  errorContainer: {
+    fontSize: 18,
+    color: 'red',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  error: {
+    fontSize: 18,
+    color: 'red',
   }
 });
 
