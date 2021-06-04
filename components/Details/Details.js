@@ -4,11 +4,12 @@ import { Image, Platform, ScrollView, StatusBar, StyleSheet, Text, View } from "
 import Button from "../CoreComponent/Button";
 
 const Details = ({ route }) => {
-  const { img, name, service_charge, author, features, customers, ratings } = route.params;
-
+  const { img, name, service_charge, author, features, customers, ratings } = route.params&&route.params || {};
   const ratingArr = [1, 2, 3, 4, 5];
 
   return (
+    <>
+    {route.params?
     <ScrollView style={styles.container}>
       <View style={styles}>
         <Image
@@ -42,6 +43,11 @@ const Details = ({ route }) => {
         <Button text='Buy The Service' style={styles.button}  />
       </View>
     </ScrollView>
+    :<View style={styles.errorContainer}>
+      <Text style={styles.error}>Your Need To Select A Service</Text>
+    </View>
+    }
+    </>
   );
 };
 
@@ -110,6 +116,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     marginTop: 10,
     marginLeft: 5,
+  },
+  errorContainer: {
+    fontSize: 18,
+    color: 'red',
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  error: {
+    fontSize: 18,
+    color: 'red',
   }
 });
 
