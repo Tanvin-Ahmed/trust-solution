@@ -33,32 +33,34 @@ export function LoginScreen({ navigation }) {
   };
 
   return (
-    <AuthContainer style={styles.body}>
-      <Image
-        style={styles.loginImg}
-        source={require("../../images/login.png")}
-      />
-      <Heading style={styles.title}>LOGIN</Heading>
-      <Input
-        style={styles.input}
-        placeholder={"Email"}
-        keyboardType={"email-address"}
-        value={email}
-        onChangeText={setEmail}
-      />
-      <Input
-        style={styles.input}
-        placeholder={"Password"}
-        secureTextEntry
-        value={password}
-        onChangeText={setPassword}
-      />
-      <FilledButton
-        title={"Login"}
-        style={styles.loginButton}
-        onPress={handleLogin}
-      />
-    </AuthContainer>
+    <ScrollView>
+      <AuthContainer style={styles.body}>
+        <Image
+          style={styles.loginImg}
+          source={require("../../images/login.png")}
+        />
+        <Heading style={styles.title}>LOGIN</Heading>
+        <Input
+          style={styles.input}
+          placeholder={"Email"}
+          keyboardType={"email-address"}
+          value={email}
+          onChangeText={setEmail}
+        />
+        <Input
+          style={styles.input}
+          placeholder={"Password"}
+          secureTextEntry
+          value={password}
+          onChangeText={setPassword}
+        />
+        <FilledButton
+          title={"Login"}
+          style={styles.loginButton}
+          onPress={handleLogin}
+        />
+      </AuthContainer>
+    </ScrollView>
   );
 }
 

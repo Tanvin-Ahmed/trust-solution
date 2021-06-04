@@ -17,7 +17,7 @@ export default function App() {
       <NavigationContainer>
         <Drawer.Navigator>
           <Drawer.Screen
-            name={loginInfo ? "logOut" : "LogIn"}
+            name={loginInfo ? "Log Out" : "LogIn"}
             component={LoginScreen}
           />
           {loginInfo && (
